@@ -1,0 +1,48 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: ClusterServiceVersion
+metadata:
+  annotations:
+    alm-examples: '[]'
+    capabilities: Basic Install
+  name: memcache-operator.v0.0.0
+  namespace: placeholder
+spec:
+  apiservicedefinitions: {}
+  customresourcedefinitions:
+    owned:
+    - description: Memcached is the Schema for the memcacheds API
+      displayName: Memcached
+      kind: Memcached
+      name: memcacheds.cache.18868108662
+      version: v1alpha1
+  description: memcahed operator sample
+  displayName: memcached-operator
+  icon:
+  - base64data: ""
+    mediatype: ""
+  install:
+    spec:
+      deployments: null
+    strategy: ""
+  installModes:
+  - supported: false
+    type: OwnNamespace
+  - supported: false
+    type: SingleNamespace
+  - supported: false
+    type: MultiNamespace
+  - supported: true
+    type: AllNamespaces
+  keywords:
+  - cache
+  links:
+  - name: Memcache Operator
+    url: https://memcache-operator.domain
+  maintainers:
+  - email: 375644560ljp@gmail.com
+    name: popozy
+  maturity: alpha
+  provider:
+    name: popozy
+    url: kapor.club
+  version: 0.0.0
